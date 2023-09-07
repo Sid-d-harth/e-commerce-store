@@ -7,7 +7,7 @@ export default function EditProductPage() {
     const router = useRouter();
     const {id} = router.query;
     useEffect(() => {
-        axios.get('/api/products?id='+id)
+        // axios.get('/api/products?id='+id)
     }, [id]);
     return (
         <Layout>
