@@ -6,7 +6,7 @@ export default function ProductForm({
     _id,
     title:existingTitle,
     description:existingDescription,
-    price:existingPrice
+    price:existingPrice,
 }) {
     const [title, setTitle] = useState(existingTitle || '');
     const [description, setDescription] = useState(existingDescription || '');
@@ -18,7 +18,7 @@ export default function ProductForm({
         const data = {title, description, price};
         if (_id) {
             // update
-            await axios.put('/api/products', {...data, _id});
+            await axios.put('/api/products', {...data,_id});
         } else {
             // create
             await axios.post('/api/products', data);
